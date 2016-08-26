@@ -1,0 +1,27 @@
+{
+  "name": "angular2-ts-spa-skeleton",
+  "description": "angular 2 seed project",
+  "main": "",
+  "authors": [
+    "Robert Jesionek <jesionekdev@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular"
+  ],
+  "homepage": "https://github.com/jesion/angular2-ts-spa-skeleton",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.8.3",
+    "jquery": "~3.1.0"
+  }
+}

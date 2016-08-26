@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base href="/">
+	<title>Angular 2 talking to React</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+	<app>Loading...</app>
+	<script type="text/javascript" src="components/npm/zone.js/dist/zone.js"></script>
+	<script type="text/javascript" src="components/npm/typescript/lib/typescript.js"></script>
+	<script type="text/javascript" src="components/npm/reflect-metadata/Reflect.js"></script>
+	<script type="text/javascript" src="components/npm/systemjs/system.src.js"></script>
+	<script type="text/javascript" src="systemjs.config.js"></script>
+	<script>
+		System.import('app/main').catch(function (err) {console.error(err);});
+	</script>
+</body>
+</html>
