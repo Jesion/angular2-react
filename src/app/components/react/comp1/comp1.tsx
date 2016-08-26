@@ -1,3 +1,5 @@
+///<reference path="../../../../../_typings/react/index.d.ts"/>
+
 import {CountryViewModelFactory} from './data';
 
 import React = __React;
