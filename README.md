@@ -5,12 +5,8 @@
 1. Run `npm install -g gulp` to install Gulp.
 2. Run `npm install -g bower` to install Bower.
 3. Run `npm install` to install required node modules and bower components.
-5. Run `gulp build` to build the application.
-6. Run `npm start` to launch it.
-
-# single step compilation for both Angular and React components
-
-# adding react typing
-
-typings install react --save
+4. Run `typings install` to install typescript definitions.
+5. Run `tsc -m system -t es5 --emitDecoratorMetadata --experimentalDecorators --jsx react --outDir dist --rootDir src` to compile TypeScript (with JSX supprt).
+6. Run `gulp build` to build the application.
+7. Run `npm start` to launch it.
 
