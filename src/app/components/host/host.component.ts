@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyReactComponent } from '../react/comp1/comp1';
 
 @Component({
 	selector: 'host-component',

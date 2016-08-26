@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const del = require('del');
 const copy = require('gulp-copy');
 const typescript = require('gulp-typescript');
+const typescriptProj = typescript.createProject('tsconfig.json');
 const sourcemaps = require('gulp-sourcemaps');
 const tsconfig = require('./tsconfig.json');
 const gls = require('gulp-live-server');
@@ -125,7 +126,32 @@ gulp.task('copy:systemjs-config', function() {
 });
 
 gulp.task('compile', ['installTypings'], function () {
-	return gulp
+
+//	var tsResult = typescriptProj.src()
+//		.pipe(sourcemaps.init())
+//		.pipe(typescript(typescriptProj))
+//		.pipe(sourcemaps.write('.', { sourceRoot: __dirname + '/src/app' }));
+//		
+//		return tsResult.js.pipe(gulp.dest('dist'));
+
+//
+//	return gulp
+//		.src(['src/app/**/*.ts'], {base : './src' })
+//		.pipe(sourcemaps.init())
+//		.pipe(typescript(tsconfig.compilerOptions))
+//		.pipe(sourcemaps.write('.', { sourceRoot: __dirname + '/src/app' }))
+//		.pipe(gulp.dest('dist'));
+
+//this does not compile tsx
+//return gulp
+//		.src(['src/app/**/*.ts'], {base : './src' })
+//		.pipe(sourcemaps.init())
+//		.pipe(typescript({ jsx: 'react', experimentalDecorators: true, target: 'es5', module: 'system', moduleResolution: 'node' }))
+//		.pipe(sourcemaps.write('.', { sourceRoot: __dirname + '/src/app' }))
+//		.pipe(gulp.dest('dist'));
+//});
+
+return gulp
 		.src(['src/app/**/*.ts'], {base : './src' })
 		.pipe(sourcemaps.init())
 		.pipe(typescript(tsconfig.compilerOptions))
