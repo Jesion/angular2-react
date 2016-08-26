@@ -93,6 +93,8 @@ gulp.task('copy:libs', function() {
 		.pipe(gulp.dest('dist/components/npm/flux'));
 	gulp.src(['node_modules/events/*'])	
 		.pipe(gulp.dest('dist/components/npm/events'));
+	gulp.src(['src/lib/require.js'])
+		.pipe(gulp.dest('dist/components/manual/require'));
 });
 
 gulp.task('copy:fonts', function() {
