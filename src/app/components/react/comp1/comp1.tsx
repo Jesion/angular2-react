@@ -1,12 +1,14 @@
 ///<reference path="../../../../../_typings/react/index.d.ts"/>
+///<reference path="../../../../../typings/modules/flux/index.d.ts"/>
+///<reference path="../../../../../typings/globals/underscore/index.d.ts"/>
 
 import {CountryViewModelFactory} from './data';
 
-import React = __React;
+import * as React from 'react';
+import * as _ from 'underscore';
 
 declare var Dispatcher: any;
 declare var EventEmitter: any;
-declare var _ : any;
 
 var AppDispatcher = new Dispatcher();
 

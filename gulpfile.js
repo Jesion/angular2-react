@@ -86,6 +86,13 @@ gulp.task('copy:libs', function() {
 		.pipe(gulp.dest('dist/components/npm'));	
 	gulp.src(['node_modules/reflect-metadata/**/*'], { base: 'node_modules' })
 		.pipe(gulp.dest('dist/components/npm'));
+	gulp.src(['components/react/*'], { base: 'components' })
+		.pipe(rename({dirname: ''}))
+		.pipe(gulp.dest('dist/components/bower/react'));
+	gulp.src(['node_modules/flux/dist/*'])
+		.pipe(gulp.dest('dist/components/npm/flux'));
+	gulp.src(['node_modules/events/*'])	
+		.pipe(gulp.dest('dist/components/npm/events'));
 });
 
 gulp.task('copy:fonts', function() {

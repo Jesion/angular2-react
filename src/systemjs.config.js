@@ -4,7 +4,10 @@ System.config({
 	map: {
 		'app' : 'app',
 		'rxjs': 'components/npm/rxjs',
-		'@angular'                         : 'components/npm/@angular'	
+		'@angular'                         : 'components/npm/@angular',
+		'react'							   : 'components/bower/react',
+		'flux'							   : 'components/npm/flux',
+		'underscore'					   : 'components/bower/underscore'
 	},
 	packages: {
 		'app'                              : { main: 'main.js', defaultExtension: 'js', format: 'register' },
@@ -16,6 +19,9 @@ System.config({
 		'@angular/forms'				   : { main: 'index.js' },
 		'@angular/router'                  : { main: 'index.js' },
 		'@angular/platform-browser'        : { main: 'index.js' },
-		'@angular/platform-browser-dynamic': { main: 'index.js' }
+		'@angular/platform-browser-dynamic': { main: 'index.js' },
+		'react'							   : { main: 'react.js' },
+		'flux'							   : { main: 'Flux.js' },
+		'underscore'					   : { main: 'underscore.js' }
 	}
 });
