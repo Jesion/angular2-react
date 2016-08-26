@@ -228,8 +228,7 @@ gulp.task('build', [
 	'copy:index',
 	'copy:systemjs-config',
 	'copy:unit-test-html',
-	//'compile',// removing for now since i can't get it to compile tsx, only installing typings
-	'installTypings',
+	//'compile',// removing for now since i can't get it to compile tsx..
 	'sass',
 	'less',
 	'copy:libs',

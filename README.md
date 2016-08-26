@@ -9,4 +9,3 @@
 5. Run `tsc -m system -t es5 --emitDecoratorMetadata --experimentalDecorators --jsx react --outDir dist --rootDir src` to compile TypeScript (with JSX supprt).
 6. Run `gulp build` to build the application.
 7. Run `npm start` to launch it.
-
