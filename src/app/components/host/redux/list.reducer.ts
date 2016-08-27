@@ -5,9 +5,9 @@ export function reducer(state: Array<string>, action: IAction) {
 
     switch (action.type) {
         case 'ADD':
-            return _.union(state, [ action.value ] );
+            return _.union( state, [ action.value ] );
         case 'REMOVE':
-            return _.filter(state, function (item) { return item != action.value });
+            return _.filter( state, function (item) { return item != action.value } );
         default:
             return state;
     }

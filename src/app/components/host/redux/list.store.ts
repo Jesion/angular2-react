@@ -7,7 +7,7 @@ export class ValueStore {
     public store: Redux.Store<Array<string>>;
 
     constructor (values: Array<string>) {
-        this.store = createStore( reducer, values);
+        this.store = createStore( reducer, values );
     }
 
     get values(): Array<string> {
@@ -15,6 +15,6 @@ export class ValueStore {
     }
 
     dispatch(action: IAction) {
-        this.store.dispatch(action);
+        this.store.dispatch( action );
     }
 }
