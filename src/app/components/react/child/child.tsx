@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { ValueStore } from '../../host/redux/list.store';
 
-interface SimpleReactComponentViewProps {
+interface ReactChildComponentViewProps {
    title: String;
    store: ValueStore;
 }
 
-var SimpleReactComponent = React.createClass<SimpleReactComponentViewProps, any>({
+var ReactChildComponent = React.createClass<ReactChildComponentViewProps, any>({
 
     getInitialState: function() {
          this.props.store.store.subscribe(() => {
@@ -18,14 +18,14 @@ var SimpleReactComponent = React.createClass<SimpleReactComponentViewProps, any>
 
     render: function() {
         return(
-           <div>{this.state.title + ' Elements in store: ' +  this.state.count}</div>
+           <div>{this.state.title + ' Current state: ' +  this.state.count}</div>
         );
     }
 });
 
-export class SimpleReactComponentView {
+export class ReactChildComponentView {
 
     static initialize(title, store: ValueStore, containerId){
-        React.render(<SimpleReactComponent title={title} store={store}/>, document.getElementById(containerId));
+        React.render(<ReactChildComponent title={title} store={store}/>, document.getElementById(containerId));
     }
 }

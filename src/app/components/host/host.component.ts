@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { SimpleReactComponentView } from '../react/comp1/comp1';
+import { ReactChildComponentView } from '../react/child/child';
 import { ValueStore } from './redux/list.store';
 import { add, remove } from './redux/list.action';
 
 @Component({
 	selector: 'host-component',
 	templateUrl: 'app/components/host/host.component.html',
-	styleUrls: ['app/components/host/host.component.css'],
-	providers: [
-	
-	]
+	styleUrls: ['app/components/host/host.component.css']
 })
 
 export class HostComponent implements OnInit { 
@@ -33,8 +30,8 @@ export class HostComponent implements OnInit {
 	}
 
 	public ngOnInit() {
-		SimpleReactComponentView.initialize( this.helloReact, this.store, 'react-component-container' );
-		SimpleReactComponentView.initialize( this.helloReact, this.store, 'react-component-container-2' );
+		ReactChildComponentView.initialize( this.helloReact, this.store, 'react-component-container' );
+		ReactChildComponentView.initialize( this.helloReact, this.store, 'react-component-container-2' );
 	}
 
 	public onAdd() {
