@@ -1,8 +1,4 @@
-///<reference path="../../../../../_typings/react/index.d.ts"/>
-///<reference path="../../../../../typings/globals/underscore/index.d.ts"/>
-
 import * as React from 'react';
-import * as _ from 'underscore';
 
 interface SimpleReactComponentViewProps {
    title: String;
