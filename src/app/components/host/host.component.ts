@@ -14,7 +14,7 @@ import { add, remove } from './redux/list.action';
 
 export class HostComponent implements OnInit { 
 
-    public title: string = 'Hello World Angular 2!';
+    public helloAngular: string = 'Hello World Angular 2!';
 	public helloReact: string = 'Hello World React!';
 	
 	public store: ValueStore;

@@ -18,7 +18,7 @@ var SimpleReactComponent = React.createClass<SimpleReactComponentViewProps, any>
 
     render: function() {
         return(
-           <div>{this.state.title + this.state.count}</div>
+           <div>{this.state.title + 'Elements in store: ' +  this.state.count}</div>
         );
     }
 });
