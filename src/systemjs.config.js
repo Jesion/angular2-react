@@ -5,9 +5,9 @@ System.config({
 		'app' : 'app',
 		'rxjs': 'components/npm/rxjs',
 		'@angular'                         : 'components/npm/@angular',
-		'react'							   : 'components/bower/react',
-		'flux'							   : 'components/npm/flux',
-		'underscore'					   : 'components/bower/underscore'
+		'react'							   : 'components/bower/react',		
+		'underscore'					   : 'components/bower/underscore',
+		'redux'							   : 'components/npm/redux/redux.min.js'
 	},
 	packages: {
 		'app'                              : { main: 'main.js', defaultExtension: 'js', format: 'register' },
@@ -20,8 +20,7 @@ System.config({
 		'@angular/router'                  : { main: 'index.js' },
 		'@angular/platform-browser'        : { main: 'index.js' },
 		'@angular/platform-browser-dynamic': { main: 'index.js' },
-		'react'							   : { main: 'react.js' },
-		'flux'							   : { main: 'Flux.js' },
+		'react'							   : { main: 'react.js' },		
 		'underscore'					   : { main: 'underscore.js' }
 	}
 });

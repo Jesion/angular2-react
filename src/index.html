@@ -16,14 +16,8 @@
 	<script type="text/javascript" src="components/npm/reflect-metadata/Reflect.js"></script>
 	<script type="text/javascript" src="components/npm/systemjs/system.src.js"></script>
 	<script type="text/javascript" src="components/bower/react/react.js"></script>
-	<script type="text/javascript" src="components/npm/flux/Flux.js"></script>
 	<script type="text/javascript" src="components/bower/underscore/underscore.js"></script>
 	<script type="text/javascript" src="systemjs.config.js"></script>
-	<script type="text/javascript" src="components/manual/require/require.js"></script>
-	<script>		
-		var Dispatcher = require('./components/npm/flux/Flux.min').Dispatcher;
-		var EventEmitter = require('./components/npm/events/events').EventEmitter;
-	</script>	
 	<script>
 		System.import('app/main').catch(function (err) {console.error(err);});
 	</script>
