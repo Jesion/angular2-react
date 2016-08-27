@@ -1,7 +1,14 @@
-<div>
-    {{helloAngular}} Elements in store: {{store.store.getState().length}}
-    <input type="text" [(ngModel)]="val"/>
-    <button (click)="onAdd()">ADD</button>
-    <button (click)="onRemove()">REMOVE</button>
+<div class="host-container">
+    <div class="panel">
+        <label>{{helloAngular}} Elements in store: {{store.store.getState().length}}</label>
+        <div>
+            <input type="text" [(ngModel)]="val"/>
+            <button (click)="onAdd()">ADD</button>
+            <button (click)="onRemove()">REMOVE</button>
+        </div>
+    </div>    
+    <div class="react-container" id="react-component-container">
+    </div>
+    <div class="react-container" id="react-component-container-2">
+    </div>
 </div>
-<div id="react-component-container"></div>

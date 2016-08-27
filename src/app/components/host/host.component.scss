@@ -1,12 +1,21 @@
-div {    
-    width: 400px;
-    height: 400px;
+.host-container {  
+   display: flex;
+   flex-direction: row;   
+   background-color: red;
+   margin: 20px; 
+   padding: 20px; 
 }
 
-.green {
-    background-color: green;
+.panel {
+  width: 400px;   
+  min-height: 400px;   
+  background-color: #DADADA;
+  margin-right: 20px;
 }
 
-.yellow {
-    background-color: yellow;
+.react-container {
+  width: 400px;   
+  min-height: 400px;   
+  background-color: yellow;
+  margin-right: 20px;
 }

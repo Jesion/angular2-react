@@ -33,7 +33,8 @@ export class HostComponent implements OnInit {
 	}
 
 	public ngOnInit() {
-		SimpleReactComponentView.initialize( this.helloReact, this.store );
+		SimpleReactComponentView.initialize( this.helloReact, this.store, 'react-component-container' );
+		SimpleReactComponentView.initialize( this.helloReact, this.store, 'react-component-container-2' );
 	}
 
 	public onAdd() {

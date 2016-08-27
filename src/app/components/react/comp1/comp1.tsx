@@ -25,7 +25,7 @@ var SimpleReactComponent = React.createClass<SimpleReactComponentViewProps, any>
 
 export class SimpleReactComponentView {
 
-    static initialize(title, store: ValueStore){
-        React.render(<SimpleReactComponent title={title} store={store} />, document.getElementById('react-component-container'));
+    static initialize(title, store: ValueStore, containerId){
+        React.render(<SimpleReactComponent title={title} store={store}/>, document.getElementById(containerId));
     }
 }
