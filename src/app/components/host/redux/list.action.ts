@@ -16,3 +16,10 @@ export function remove(value: string): IAction {
         value: value
     }
 }
+
+export function removeLast(): IAction {
+    return {
+        type: 'REMOVE_LAST',
+        value: null
+    }
+}
