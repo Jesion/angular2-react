@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ReactTreeView } from '../react/comp1/comp1';
+import { SimpleReactComponentView } from '../react/comp1/comp1';
 
 @Component({
 	selector: 'host-component',
@@ -10,15 +10,16 @@ import { ReactTreeView } from '../react/comp1/comp1';
 	]
 })
 
-export class HostComponent implements OnInit { 
+export class MainComponent implements OnInit { 
 
     public title: string = 'Hello world Angular 2!';
+	public helloReact: string = 'Hello react!';
 
 	constructor() {
 	
 	}
 
 	public ngOnInit() {
-		ReactTreeView.initialize('Locations');
+		SimpleReactComponentView.initialize(this.helloReact);
 	}
 }

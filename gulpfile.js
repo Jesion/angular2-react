@@ -89,12 +89,6 @@ gulp.task('copy:libs', function() {
 	gulp.src(['components/react/*'], { base: 'components' })
 		.pipe(rename({dirname: ''}))
 		.pipe(gulp.dest('dist/components/bower/react'));
-	gulp.src(['node_modules/flux/dist/*'])
-		.pipe(gulp.dest('dist/components/npm/flux'));
-	gulp.src(['node_modules/events/*'])	
-		.pipe(gulp.dest('dist/components/npm/events'));
-	gulp.src(['src/lib/require.js'])
-		.pipe(gulp.dest('dist/components/manual/require'));
 });
 
 gulp.task('copy:fonts', function() {
@@ -136,24 +130,9 @@ gulp.task('copy:systemjs-config', function() {
 
 gulp.task('compile', ['installTypings'], function () {
 
-//	var tsResult = typescriptProj.src()
-//		.pipe(sourcemaps.init())
-//		.pipe(typescript(typescriptProj))
-//		.pipe(sourcemaps.write('.', { sourceRoot: __dirname + '/src/app' }));
-//		
-//		return tsResult.js.pipe(gulp.dest('dist'));
-
-//
-//	return gulp
-//		.src(['src/app/**/*.ts'], {base : './src' })
-//		.pipe(sourcemaps.init())
-//		.pipe(typescript(tsconfig.compilerOptions))
-//		.pipe(sourcemaps.write('.', { sourceRoot: __dirname + '/src/app' }))
-//		.pipe(gulp.dest('dist'));
-
 //this does not compile tsx
 //return gulp
-//		.src(['src/app/**/*.ts'], {base : './src' })
+//		.src(['src/app/**/*.ts', 'src/app/**/*.tsx'], {base : './src' })
 //		.pipe(sourcemaps.init())
 //		.pipe(typescript({ jsx: 'react', experimentalDecorators: true, target: 'es5', module: 'system', moduleResolution: 'node' }))
 //		.pipe(sourcemaps.write('.', { sourceRoot: __dirname + '/src/app' }))
