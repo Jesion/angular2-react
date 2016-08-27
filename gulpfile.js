@@ -89,6 +89,9 @@ gulp.task('copy:libs', function() {
 	gulp.src(['components/react/*'], { base: 'components' })
 		.pipe(rename({dirname: ''}))
 		.pipe(gulp.dest('dist/components/bower/react'));
+	gulp.src(['node_modules/redux/dist/*'], {base: 'node_modules'})
+		.pipe(rename({dirname: ''}))
+		.pipe(gulp.dest('dist/components/npm/redux'));
 });
 
 gulp.task('copy:fonts', function() {
