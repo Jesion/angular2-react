@@ -14,8 +14,8 @@ import { add, remove } from './redux/list.action';
 
 export class HostComponent implements OnInit { 
 
-    public title: string = 'Hello world Angular 2!';
-	public helloReact: string = 'Hello react!';
+    public title: string = 'Hello World Angular 2!';
+	public helloReact: string = 'Hello World React!';
 	
 	public store: ValueStore;
 
@@ -28,12 +28,12 @@ export class HostComponent implements OnInit {
 	public initStore() {
 		this.store = new ValueStore( ['yellow', 'blue'] );
 		this.store.store.subscribe(() => {
-			//value store changed...
+			console.log('Angular 2 captured store changed: ' + this.store.store.getState().length);
 		});
 	}
 
 	public ngOnInit() {
-		SimpleReactComponentView.initialize( this.helloReact );
+		SimpleReactComponentView.initialize( this.helloReact, this.store );
 	}
 
 	public onAdd() {

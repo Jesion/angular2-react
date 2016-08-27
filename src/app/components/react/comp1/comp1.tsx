@@ -1,37 +1,31 @@
 import * as React from 'react';
+import { ValueStore } from '../../host/redux/list.store';
 
 interface SimpleReactComponentViewProps {
    title: String;
+   store: ValueStore;
 }
 
 var SimpleReactComponent = React.createClass<SimpleReactComponentViewProps, any>({
 
     getInitialState: function() {
-        return this.props;
-    },
-
-    onChange: function() {
-
-    },
-
-    componentDidMount: function() {
-
-    },
-
-    componentWillUnmount: function() {
-
+         this.props.store.store.subscribe(() => {
+            console.log('React captured store changed: ' + this.props.store.store.getState().length);
+            this.setState({ 'count': this.props.store.store.getState().length });      
+        });
+        return { 'title': this.props.title, 'count':  this.props.store.store.getState().length }       
     },
 
     render: function() {
         return(
-           <div>{this.props.title}</div>
+           <div>{this.state.title + this.state.count}</div>
         );
     }
 });
 
 export class SimpleReactComponentView {
 
-    static initialize(title){
-        React.render(<SimpleReactComponent title={title}/>, document.getElementById('react-component-container'));
+    static initialize(title, store: ValueStore){
+        React.render(<SimpleReactComponent title={title} store={store} />, document.getElementById('react-component-container'));
     }
 }
