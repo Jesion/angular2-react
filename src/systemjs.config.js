@@ -6,7 +6,8 @@ System.config({
 		'rxjs': 'components/npm/rxjs',
 		'@angular'                         : 'components/npm/@angular',
 		'react'							   : 'components/bower/react',		
-		'underscore'					   : 'components/bower/underscore'
+		'underscore'					   : 'components/bower/underscore',
+		'redux'							   : 'components/npm/redux/redux.min.js'
 	},
 	packages: {
 		'app'                              : { main: 'main.js', defaultExtension: 'js', format: 'register' },
