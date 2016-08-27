@@ -24,9 +24,7 @@ var SimpleReactComponent = React.createClass<SimpleReactComponentViewProps, any>
 
     render: function() {
         return(
-           <div>
-                <h2>{this.props.title}</h2>
-           </div>
+           <div>{this.props.title}</div>
         );
     }
 });
