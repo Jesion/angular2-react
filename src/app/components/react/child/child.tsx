@@ -32,7 +32,7 @@ var ReactChildComponent = React.createClass<ReactChildComponentViewProps, any>({
         var elements = this.state.elements;
         return(
            <div>
-            <label>{this.state.title + ' Current state: ' +  this.state.count}</label>
+            <label>{this.state.title + ' Current state elements: ' +  this.state.count}</label>
             <div>
                 <button onClick={this.click}>Remove Last</button>
             </div>
