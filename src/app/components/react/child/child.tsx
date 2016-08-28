@@ -12,10 +12,16 @@ var ReactChildComponent = React.createClass<ReactChildComponentViewProps, any>({
 
     getInitialState: function() {
          this.props.store.store.subscribe(() => {
-            console.log('React captured store changed: ' + this.props.store.store.getState().length);
-            this.setState({ 'count': this.props.store.store.getState().length, 'elements' : this.props.store.store.getState() });      
+             this.setState({ 
+                'count': this.props.store.store.getState().length,
+                'elements' : this.props.store.store.getState()
+             });      
         });
-        return { 'title': this.props.title, 'count':  this.props.store.store.getState().length, 'elements': this.props.store.store.getState() }       
+        return { 
+            'title': this.props.title, 
+            'count':  this.props.store.store.getState().length, 
+            'elements': this.props.store.store.getState() 
+        }       
     },
 
     click: function() {
