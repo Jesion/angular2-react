@@ -4,5 +4,8 @@
         "redux": "registry:dt/redux#3.5.2+20160703092728",
         "underscore": "registry:dt/underscore#1.7.0+20160805164035"
     },
-    "dependencies": {}
+    "dependencies": {
+        "react": "registry:npm/react#15.0.1+20160601175240",
+        "react-dom": "registry:npm/react-dom#15.0.1+20160826174104"
+    }
 }

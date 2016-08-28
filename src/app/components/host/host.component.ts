@@ -16,16 +16,16 @@ export class HostComponent implements OnInit {
 	
 	public store: ValueStore;
 
-	public val: string;
+	public val: string = 'red';
 	
 	constructor() {
 		this.initStore();			
 	}
 
 	public initStore() {
-		this.store = new ValueStore( ['yellow', 'blue'] );
+		this.store = new ValueStore( ['yellow', 'blue', 'orange', 'black', 'white'] );
 		this.store.store.subscribe(() => {
-			console.log('Angular 2 captured store changed: ' + this.store.store.getState().length);
+			console.log('on state change (angular 2 host): ' + this.store.store.getState().length);
 		});
 	}
 
