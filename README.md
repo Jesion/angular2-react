@@ -1,4 +1,4 @@
-# Angular 2 shell application interacting with React components
+# Angular 2 host interacting with React children
 
 # building and running it
 
