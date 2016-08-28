@@ -67,9 +67,6 @@ gulp.task('copy:libs', function() {
 	gulp.src(['node_modules/angular2-materialize/dist/*'], {base: 'node_modules'})
 		.pipe(rename({dirname: ''}))
 		.pipe(gulp.dest('dist/components/npm/angular2-materialize'));			
-	gulp.src(['node_modules/redux/dist/*'], {base: 'node_modules'})
-		.pipe(rename({dirname: ''}))
-		.pipe(gulp.dest('dist/components/npm/redux'));	  
 	gulp.src(['node_modules/immutable/dist/*'], {base: 'node_modules'})
 		.pipe(rename({dirname: ''}))
 		.pipe(gulp.dest('dist/components/npm/immutable'));
@@ -135,18 +132,8 @@ gulp.task('copy:systemjs-config', function() {
 });
 
 gulp.task('compile', ['installTypings'], function () {
-
-//this does not compile tsx
-//return gulp
-//		.src(['src/app/**/*.ts', 'src/app/**/*.tsx'], {base : './src' })
-//		.pipe(sourcemaps.init())
-//		.pipe(typescript({ jsx: 'react', experimentalDecorators: true, target: 'es5', module: 'system', moduleResolution: 'node' }))
-//		.pipe(sourcemaps.write('.', { sourceRoot: __dirname + '/src/app' }))
-//		.pipe(gulp.dest('dist'));
-//});
-
-return gulp
-		.src(['src/app/**/*.ts'], {base : './src' })
+	return gulp
+		.src(['src/app/**/*.ts', 'src/app/**/*.tsx'], {base : './src' })
 		.pipe(sourcemaps.init())
 		.pipe(typescript(tsconfig.compilerOptions))
 		.pipe(sourcemaps.write('.', { sourceRoot: __dirname + '/src/app' }))
@@ -222,7 +209,7 @@ gulp.task('build', [
 	'copy:index',
 	'copy:systemjs-config',
 	'copy:unit-test-html',
-	//'compile',// removing for now since i can't get it to compile tsx..
+	'compile',
 	'sass',
 	'less',
 	'copy:libs',
