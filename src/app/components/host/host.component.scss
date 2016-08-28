@@ -1,14 +1,18 @@
 .host-container {  
    display: flex;
    flex-direction: row;     
-   margin: 20px; 
-   padding: 20px; 
+   flex-wrap: wrap;   
+   padding-top: 20px; 
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-bottom: 0px;
 }
 
 .panel {
   width: 400px;    
   background-color: lightgreen;
   margin-right: 20px;
+  margin-bottom: 20px;
   padding: 20px;
   .frm {
     padding-top: 20px;
@@ -19,5 +23,6 @@
   width: 400px;     
   background-color: lightblue;
   margin-right: 20px;
+  margin-bottom: 20px;
   padding: 20px;
 }
