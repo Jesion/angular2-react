@@ -1,5 +1,7 @@
 # Angular 2 host interacting with React children
 
+[Demo](http://demo.robertjesionek.com/angular2-react)
+
 # building and running it
 
 1. Run `npm install -g gulp` to install Gulp.
