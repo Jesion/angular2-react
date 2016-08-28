@@ -12,14 +12,12 @@ var ReactChildComponent = React.createClass<ReactChildComponentViewProps, any>({
 
     getInitialState: function() {
          this.props.store.store.subscribe(() => {
-             this.setState({ 
-                'count': this.props.store.store.getState().length,
+             this.setState({                 
                 'elements' : this.props.store.store.getState()
              });      
         });
         return { 
-            'title': this.props.title, 
-            'count':  this.props.store.store.getState().length, 
+            'title': this.props.title,             
             'elements': this.props.store.store.getState() 
         }       
     },
@@ -32,7 +30,7 @@ var ReactChildComponent = React.createClass<ReactChildComponentViewProps, any>({
         var elements = this.state.elements;
         return(
            <div>
-            <label>{this.state.title + ' Current state elements: ' +  this.state.count}</label>
+            <label>{this.state.title + ' Current state elements: ' +  elements.length}</label>
             <div>
                 <button onClick={this.click}>Remove Last</button>
             </div>
