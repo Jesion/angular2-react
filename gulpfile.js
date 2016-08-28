@@ -86,9 +86,6 @@ gulp.task('copy:libs', function() {
 		.pipe(gulp.dest('dist/components/npm'));	
 	gulp.src(['node_modules/reflect-metadata/**/*'], { base: 'node_modules' })
 		.pipe(gulp.dest('dist/components/npm'));
-	gulp.src(['components/react/*'], { base: 'components' })
-		.pipe(rename({dirname: ''}))		
-		.pipe(gulp.dest('dist/components/bower/react'));
 	gulp.src(['node_modules/react-dom/dist/*'], { base: 'node_modules' })
 		.pipe(rename({dirname: ''}))
 		.pipe(gulp.dest('dist/components/npm/react-dom'));
