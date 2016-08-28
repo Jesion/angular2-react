@@ -16,7 +16,7 @@ export class HostComponent implements OnInit {
 	
 	public store: ValueStore;
 
-	public val: string;
+	public val: string = 'red';
 	
 	constructor() {
 		this.initStore();			
