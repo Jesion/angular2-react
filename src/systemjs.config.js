@@ -5,7 +5,8 @@ System.config({
 		'app' : 'app',
 		'rxjs': 'components/npm/rxjs',
 		'@angular'                         : 'components/npm/@angular',
-		'react'							   : 'components/bower/react',		
+		'react'							   : 'components/npm/react',	
+		'react-dom'					       : 'components/npm/react-dom',	
 		'underscore'					   : 'components/bower/underscore',
 		'redux'							   : 'components/npm/redux/redux.min.js'
 	},
@@ -21,6 +22,7 @@ System.config({
 		'@angular/platform-browser'        : { main: 'index.js' },
 		'@angular/platform-browser-dynamic': { main: 'index.js' },
 		'react'							   : { main: 'react.js' },		
+		'react-dom'						   : { main: 'react-dom.js' },
 		'underscore'					   : { main: 'underscore.js' }
 	}
 });

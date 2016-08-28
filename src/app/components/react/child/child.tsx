@@ -1,7 +1,7 @@
 import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { ValueStore } from '../../host/redux/list.store';
 import { removeLast } from '../../host/redux/list.action';
-
 
 interface ReactChildComponentViewProps {
    title: String;
@@ -43,6 +43,6 @@ var ReactChildComponent = React.createClass<ReactChildComponentViewProps, any>({
 export class ReactChildComponentView {
 
     static initialize(title, store: ValueStore, containerId){
-        React.render(<ReactChildComponent title={title} store={store}/>, document.getElementById(containerId));
+        ReactDOM.render(<ReactChildComponent title={title} store={store}/>, document.getElementById(containerId));
     }
 }
