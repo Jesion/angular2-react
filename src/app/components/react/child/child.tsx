@@ -28,10 +28,11 @@ var ReactChildComponent = React.createClass<ReactChildComponentViewProps, any>({
 
     render: function() {
         var elements = this.state.elements;
+        var styles = { 'padding-top': '20px' };
         return(
            <div>
             <label>{this.state.title + ' Current state elements: ' +  elements.length}</label>
-            <div>
+            <div style={styles}>
                 <button onClick={this.click}>Remove Last</button>
             </div>
             <ul>
