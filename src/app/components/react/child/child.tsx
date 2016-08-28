@@ -34,11 +34,11 @@ var ReactChildComponent = React.createClass<ReactChildComponentViewProps, any>({
            <div>
             <label>{this.state.title + ' Current state: ' +  this.state.count}</label>
             <div>
-                <button onClick={this.click.bind(this)}>Remove Last</button>
+                <button onClick={this.click}>Remove Last</button>
             </div>
             <ul>
-                {elements.map(function(listValue){
-                    return <li>{listValue}</li>;
+                {elements.map(function(listValue, i){
+                    return <li key={i}>{listValue}</li>;
                 })}
             </ul>            
            </div>
