@@ -1,7 +1,6 @@
 .host-container {  
    display: flex;
-   flex-direction: row;   
-   background-color: red;
+   flex-direction: row;     
    margin: 20px; 
    padding: 20px; 
 }
@@ -9,7 +8,7 @@
 .panel {
   width: 400px;   
   min-height: 400px;   
-  background-color: #DADADA;
+  background-color: lightgreen;
   margin-right: 20px;
   padding: 20px;
   .frm {
@@ -20,7 +19,7 @@
 .react-container {
   width: 400px;   
   min-height: 400px;   
-  background-color: yellow;
+  background-color: lightblue;
   margin-right: 20px;
   padding: 20px;
 }
