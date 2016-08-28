@@ -8,7 +8,7 @@ System.config({
 		'react'							   : 'components/npm/react',	
 		'react-dom'					       : 'components/npm/react-dom',	
 		'underscore'					   : 'components/bower/underscore',
-		'redux'							   : 'components/npm/redux/redux.min.js'
+		'redux'							   : 'components/npm/redux'
 	},
 	packages: {
 		'app'                              : { main: 'main.js', defaultExtension: 'js', format: 'register' },
@@ -23,6 +23,7 @@ System.config({
 		'@angular/platform-browser-dynamic': { main: 'index.js' },
 		'react'							   : { main: 'react.js' },		
 		'react-dom'						   : { main: 'react-dom.js' },
-		'underscore'					   : { main: 'underscore.js' }
-	}
+		'underscore'					   : { main: 'underscore.js' },
+		'redux'							   : { main: 'redux.js' }
+	}		
 });
