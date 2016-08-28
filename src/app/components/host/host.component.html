@@ -3,8 +3,8 @@
         <label>{{helloAngular}} Current state: {{store.store.getState().length}}</label>
         <div class="frm">
             <input type="text" [(ngModel)]="val"/>
-            <button (click)="onAdd()">ADD</button>
-            <button (click)="onRemove()">REMOVE</button>
+            <button (click)="onAdd()">Add</button>
+            <button (click)="onRemove()">Remove</button>
         </div>
         <ul>
            <li *ngFor="let item of store.store.getState()">{{item}}</li>           
