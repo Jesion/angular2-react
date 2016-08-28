@@ -1,6 +1,6 @@
-# Angular 2 shell application interacting with React component
+# Angular 2 shell application interacting with React components
 
-# building and running the bare shell project
+# building and running it
 
 1. Run `npm install -g gulp` to install Gulp.
 2. Run `npm install -g bower` to install Bower.
