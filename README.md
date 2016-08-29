@@ -1,4 +1,4 @@
-# Angular 2 host component interacting with React child components with Redux.
+# Angular 2 host component interacting with React child components (via Redux).
 
 [Demo](http://demo.robertjesionek.com/angular2-react)
 
