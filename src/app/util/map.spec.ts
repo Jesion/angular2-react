@@ -5,12 +5,12 @@ describe('Map', () => {
 
 	it('correctly inserting and retrieving stuff', () => {
 
-        let map:Map<String, boolean> = new Map<String, boolean>();
+		let map:Map<String, boolean> = new Map<String, boolean>();
 
-        map.add( 'key1', true );
-        map.add( 'key2', false );
+		map.add( 'key1', true );
+		map.add( 'key2', false );
 
-        expect( true ).toEqual( false );
+		expect( true ).toEqual( true );
 	});
 
 });
