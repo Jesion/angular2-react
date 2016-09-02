@@ -15,7 +15,7 @@ export class Map<String,V> {
     public get( key: string ): V {
         let mapKeys: string[] = Object.keys( this._map );
         let value: V;
-        mapKeys.forEach((mapKey) => {
+        mapKeys.forEach(mapKey => {
             if( mapKey === key ) {
                 value = this._map[ key ];                
             }
@@ -39,7 +39,7 @@ export class Map<String,V> {
 
     public clear() {
         let keys: string[] = Object.keys( this._map );
-        keys.forEach((key) => {
+        keys.forEach(key => {
             delete this._map[ key ];
         })     
     }
