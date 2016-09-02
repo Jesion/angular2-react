@@ -47,7 +47,7 @@ var ReactChildComponent = React.createClass<ReactChildComponentViewProps, any>({
 
 export class ReactChildComponentView {
 
-    static initialize(title, store: ValueStore, containerId){
+    static initialize(title, store: ValueStore, containerId) {
         ReactDOM.render(<ReactChildComponent title={title} store={store}/>, document.getElementById(containerId));
     }
 }
