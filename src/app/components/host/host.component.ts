@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injector } from '@angular/core';
 import { ReactChildComponentView } from '../react/child/child';
 import { ValueStore } from './redux/list.store';
 import { add, remove } from './redux/list.action';
@@ -19,7 +19,7 @@ export class HostComponent implements OnInit {
 
 	public val: string = 'red';
 	
-	constructor( public model: Model ) {
+	constructor( public model: Model, public injector: Injector ) {
 		this.initStore();		
 		console.log('Resolved model instance: ' + model.uuid);	
 	}
@@ -32,8 +32,8 @@ export class HostComponent implements OnInit {
 	}
 
 	public ngOnInit() {
-		ReactChildComponentView.initialize( this.model.componentTitle, this.store, 'react-component-container' );
-		ReactChildComponentView.initialize( this.model.componentTitle, this.store, 'react-component-container-2' );
+		ReactChildComponentView.initialize( this.model.componentTitle, this.store, 'react-component-container', this.injector );
+		ReactChildComponentView.initialize( this.model.componentTitle, this.store, 'react-component-container-2', this.injector );
 	}
 
 	public onAdd() {
