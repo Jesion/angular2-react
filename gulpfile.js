@@ -2,7 +2,6 @@ const gulp = require('gulp');
 const del = require('del');
 const copy = require('gulp-copy');
 const typescript = require('gulp-typescript');
-const typescriptProj = typescript.createProject('tsconfig.json');
 const sourcemaps = require('gulp-sourcemaps');
 const tsconfig = require('./tsconfig.json');
 const gls = require('gulp-live-server');
