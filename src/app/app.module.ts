@@ -7,10 +7,12 @@ import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { routing } from './app.routes';
+import { HostComponent } from './components/host/host.component';
 
 @NgModule({
     declarations: [ 
-        AppComponent       
+        AppComponent,
+        HostComponent       
     ],
     imports: [ 
         routing,

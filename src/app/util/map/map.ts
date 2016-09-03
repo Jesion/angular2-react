@@ -12,16 +12,16 @@ export class Map<String,V> {
         this._map[ key ] = value;
     }
 
-    public get( key: string ): V {
-        let mapKeys: string[] = Object.keys( this._map );
-        let value: V;
-        mapKeys.forEach(mapKey => {
-            if( mapKey === key ) {
-                value = this._map[ key ];                
-            }
-        });
-        return value;
-    }
+	public get( key: string ): V {
+		let mapKeys: string[] = Object.keys( this._map );
+		let value: V;
+		mapKeys.forEach(mapKey => {
+			if( mapKey === key ) {
+				value = this._map[ key ];                
+			}
+		});
+		return value;
+	}
 
     public values(): Array<V> {
         let keys: string[] = Object.keys( this._map );
