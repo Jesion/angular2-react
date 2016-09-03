@@ -20,7 +20,8 @@ export class HostComponent implements OnInit {
 	public val: string = 'red';
 	
 	constructor( public model: Model ) {
-		this.initStore();			
+		this.initStore();		
+		console.log('Resolved model instance: ' + model.uuid);	
 	}
 
 	public initStore() {

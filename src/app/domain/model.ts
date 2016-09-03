@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class Model {
 
-    public id: string;
+    public uuid: string;
 
     public title: string = 'Hello World Angular 2!';
 
@@ -12,6 +12,6 @@ export class Model {
     public colors: Array<string> = ['yellow', 'blue', 'orange', 'black', 'white'];
 
     constructor() {
-        this.id = uuid.v4();
+        this.uuid = uuid.v4();
     }
 }
