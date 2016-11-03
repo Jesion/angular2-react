@@ -2,7 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HostComponent } from './components/host/host.component';
 
 const routes: Routes = [
-	{ path: '', redirectTo: 'host', terminal: true },
+	{ path: '', redirectTo: 'host', pathMatch: 'full' },
 	{ path: 'host', component: HostComponent }
 ];
 
