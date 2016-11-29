@@ -1,4 +1,4 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { reducer } from './list.reducer';
 import { IAction } from './list.action';
 
@@ -6,8 +6,10 @@ export class ValueStore {
 
     public store: Redux.Store<Array<string>>;
 
+    public composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
     constructor (values: Array<string>) {
-        this.store = createStore( reducer, values, (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__() );
+        this.store = createStore( reducer, values, this.composeEnhancers() ) ;
     }
 
     get values(): Array<string> {
@@ -18,3 +20,14 @@ export class ValueStore {
         this.store.dispatch( action );
     }
 }
+
+/*
+  import { createStore, applyMiddleware } from 'redux';
+  import { composeWithDevTools } from 'redux-devtools-extension';
+
+  const store = createStore(reducer, composeWithDevTools(
+    applyMiddleware(...middleware),
+    // other store enhancers if any
+  ));
+
+*/
