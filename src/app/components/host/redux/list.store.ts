@@ -7,7 +7,7 @@ export class ValueStore {
     public store: Redux.Store<Array<string>>;
 
     constructor (values: Array<string>) {
-        this.store = createStore( reducer, values );
+        this.store = createStore( reducer, values, (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__() );
     }
 
     get values(): Array<string> {
