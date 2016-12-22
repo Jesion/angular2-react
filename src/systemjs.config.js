@@ -13,6 +13,7 @@ System.config({
 		'@angular/platform-browser'			: 'components/npm/@angular/platform-browser/bundles/platform-browser.umd.js',
         '@angular/compiler'					: 'components/npm/@angular/compiler/bundles/compiler.umd.js',
 		'@angular/core'						: 'components/npm/@angular/core/bundles/core.umd.js',
+		'@angular/core/testing'				: 'components/npm/@angular/core/bundles/core-testing.umd.js',
 		'@angular/common'					: 'components/npm/@angular/common/bundles/common.umd.js',
 		'@angular/http'						: 'components/npm/@angular/http/bundles/http.umd.js',
 		'@angular/forms'					: 'components/npm/@angular/forms/bundles/forms.umd.js',
