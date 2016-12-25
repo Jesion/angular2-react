@@ -21,7 +21,7 @@ gulp.task('test', function (done) {
 });
 
 gulp.task('clean', function () {
-	return del(['dist', 'dist-tests', 'coverage', 'typings']);
+	return del(['dist', 'dist-tests', 'coverage']);
 });
 
 gulp.task('copy:libs', function() {	
