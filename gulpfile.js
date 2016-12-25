@@ -111,7 +111,7 @@ gulp.task('copy:assets', function() {
 });
 
 gulp.task('copy:unit-test-html', function() {
-	return gulp.src('src/unit-tests.html')  
+	return gulp.src(['src/unit-tests.html', 'src/browser-test-shim.js', 'src/systemjs.config.extras.js'])  
 		.pipe(gulp.dest('dist'));
 });
 
