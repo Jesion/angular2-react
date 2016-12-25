@@ -9,7 +9,6 @@ const tslint = require('gulp-tslint');
 const Server = require('karma').Server;
 const sass = require('gulp-sass');
 const less = require('gulp-less');
-const typings = require('gulp-typings');
 const rename = require('gulp-rename');
 const concat = require('gulp-concat');
 const protractor = require("gulp-protractor").protractor;
@@ -147,13 +146,6 @@ gulp.task('compile-e2e', function() {
 		.pipe(sourcemaps.write('.', { sourceRoot: __dirname + '/tests' }))
 		.pipe(gulp.dest('dist-tests'));
 });
-
-/*
-gulp.task('installTypings', function () {
-	return gulp.src('./typings.json')
-		.pipe(typings());
-});
-*/
 
 gulp.task('sass', ['sass-components'], function() {
 	return gulp
