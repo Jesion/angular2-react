@@ -9,7 +9,6 @@ const tslint = require('gulp-tslint');
 const Server = require('karma').Server;
 const sass = require('gulp-sass');
 const less = require('gulp-less');
-const typings = require('gulp-typings');
 const rename = require('gulp-rename');
 const concat = require('gulp-concat');
 const protractor = require("gulp-protractor").protractor;
@@ -22,7 +21,7 @@ gulp.task('test', function (done) {
 });
 
 gulp.task('clean', function () {
-	return del(['dist', 'dist-tests', 'coverage', 'typings']);
+	return del(['dist', 'dist-tests', 'coverage']);
 });
 
 gulp.task('copy:libs', function() {	
@@ -130,7 +129,7 @@ gulp.task('copy:systemjs-config', function() {
 		.pipe(gulp.dest('dist'));
 });
 
-gulp.task('compile', ['installTypings'], function () {
+gulp.task('compile', function () {
 	return gulp
 		.src(['src/app/**/*.ts', 'src/app/**/*.tsx'], {base : './src' })
 		.pipe(sourcemaps.init())
@@ -146,11 +145,6 @@ gulp.task('compile-e2e', function() {
 		.pipe(typescript(tsconfig.compilerOptions))
 		.pipe(sourcemaps.write('.', { sourceRoot: __dirname + '/tests' }))
 		.pipe(gulp.dest('dist-tests'));
-});
-
-gulp.task('installTypings', function () {
-	return gulp.src('./typings.json')
-		.pipe(typings());
 });
 
 gulp.task('sass', ['sass-components'], function() {
