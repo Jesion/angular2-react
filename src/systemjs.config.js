@@ -17,7 +17,8 @@ System.config({
 		'@angular/common'					: 'components/npm/@angular/common/bundles/common.umd.js',
 		'@angular/http'						: 'components/npm/@angular/http/bundles/http.umd.js',
 		'@angular/forms'					: 'components/npm/@angular/forms/bundles/forms.umd.js',
-		'@angular/router'					: 'components/npm/@angular/router/bundles/router.umd.js'
+		'@angular/router'					: 'components/npm/@angular/router/bundles/router.umd.js',
+		'node-uuid'							: 'components/npm/node-uuid/uuid.js'
 	},
 	packages: {
 		'app'								: { main: 'main.js', defaultExtension: 'js' },

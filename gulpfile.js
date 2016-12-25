@@ -130,7 +130,7 @@ gulp.task('copy:systemjs-config', function() {
 		.pipe(gulp.dest('dist'));
 });
 
-gulp.task('compile', ['installTypings'], function () {
+gulp.task('compile', function () {
 	return gulp
 		.src(['src/app/**/*.ts', 'src/app/**/*.tsx'], {base : './src' })
 		.pipe(sourcemaps.init())
@@ -148,10 +148,12 @@ gulp.task('compile-e2e', function() {
 		.pipe(gulp.dest('dist-tests'));
 });
 
+/*
 gulp.task('installTypings', function () {
 	return gulp.src('./typings.json')
 		.pipe(typings());
 });
+*/
 
 gulp.task('sass', ['sass-components'], function() {
 	return gulp

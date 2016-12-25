@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import * as uuid from 'node-uuid';
+
 
 @Injectable()
 export class Model {
