@@ -8,6 +8,7 @@ System.config({
 		'react'								: 'components/npm/react',	
 		'react-dom'							: 'components/npm/react-dom',	
 		'underscore'						: 'components/bower/underscore',
+		'moment'							: 'components/npm/moment',
 		'redux'								: 'components/npm/redux',
 		'@angular/platform-browser-dynamic' : 'components/npm/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
 		'@angular/platform-browser'			: 'components/npm/@angular/platform-browser/bundles/platform-browser.umd.js',
@@ -26,6 +27,7 @@ System.config({
 		'react'								: { main: 'react.js' },		
 		'react-dom'							: { main: 'react-dom.js' },
 		'underscore'						: { main: 'underscore.js' },
-		'redux'								: { main: 'redux.js' }
+		'redux'								: { main: 'redux.js' },
+		'moment'							: { main: 'moment.js' }
 	}		
 });

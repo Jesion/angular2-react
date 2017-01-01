@@ -4,21 +4,24 @@ import {
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HostComponent } from './components/host/host.component';
+import { FormComponent } from './components/form/form.component';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { routing } from './app.routes';
 
 @NgModule({
     declarations: [ 
         AppComponent,
-        HostComponent       
+        HostComponent,
+        FormComponent       
     ],
     imports: [ 
         routing,
         BrowserModule,
         HttpModule,
-        FormsModule            
+        FormsModule,
+        ReactiveFormsModule         
     ],   
     providers: [
         
