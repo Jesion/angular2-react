@@ -1,0 +1,8 @@
+<form [formGroup]="form" (submit)="onSubmit(form.value)">
+    <label>Date:</label>
+    <input type="text" 
+        name="someDate" 
+        formControlName="someDate">
+    <button type="submit" 
+        [disabled]="!form.valid">submit</button>    
+</form>
