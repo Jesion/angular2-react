@@ -51,6 +51,8 @@ gulp.task('copy:libs', function() {
 	gulp.src(['node_modules/jasmine-core/**/*'], { base: 'node_modules' })
 		.pipe(rename({dirname: ''}))
 		.pipe(gulp.dest('dist/components/npm/jasmine-core'));	
+	gulp.src(['node_modules/moment/**/*'], { base: 'node_modules' })
+		.pipe(gulp.dest('dist/components/npm'));
 	gulp.src(['components/bootstrap/dist/**/*'], { base: 'components' })
 		.pipe(rename({dirname: ''}))
 		.pipe(gulp.dest('dist/components/bower/bootstrap'));	

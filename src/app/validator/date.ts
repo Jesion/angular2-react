@@ -1,20 +1,21 @@
 import { AbstractControl, ValidatorFn } from '@angular/forms';
-
-function isEmptyInputValue(value: any) {
-  return value == null || typeof value === 'string' && value.length === 0;
-}
+import moment from 'moment';
 
 export class DateValidators {
 
-  static notInFuture(minLength: number): ValidatorFn {
-    return (control: AbstractControl): {[key: string]: any} => {
-      if (isEmptyInputValue(control.value)) {
-        return null;  // don't validate empty values to allow optional controls
-      }
-      const length: number = control.value ? control.value.length : 0;
-      return length < minLength ?
-          {'minlength': {'requiredLength': minLength, 'actualLength': length}} :
-          null;
-    };
-  }
+	static notInFuture(): ValidatorFn {
+		return (control: AbstractControl): { [key: string]: any } => {
+			let date: any = moment(control.value, 'YYYY-MM-DD');
+			let isValid: boolean = date.isValid();
+			let isInFuture: boolean = false;
+			if (isValid === true) {
+				isInFuture = date.isAfter(moment.now());
+			}
+			console.log('Validating date, input: ' + control.value + ' isValid: ' + isValid + ' isInFuture: ' + isInFuture);
+			if (isValid === true && isInFuture === false) {
+				return null;
+			}
+			return { 'inFuture': isInFuture, 'isValid': isValid };
+		};
+	}
 }

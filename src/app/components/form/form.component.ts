@@ -13,7 +13,7 @@ export class FormComponent {
 
 	constructor( fb: FormBuilder ) {
 
-		let dateControl: FormControl = new FormControl('11-05-1979', [ DateValidators.notInFuture(20) ]);
+		let dateControl: FormControl = new FormControl('1979-05-11', [ DateValidators.notInFuture() ]);
 
 		this.form = fb.group( {
 			'someDate': dateControl
