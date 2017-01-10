@@ -1,0 +1,10 @@
+<input type="text"
+    kl-validate-on-blur
+    maxlength="{{maxLen}}"
+    [formControl]="baseCtrl"
+    (keyup)="onKeyUp($event)"
+    (keypress)="onKeyPress($event)"
+    (blur)="onBlur()">
+
+
+
