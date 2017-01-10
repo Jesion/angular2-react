@@ -5,16 +5,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HostComponent } from './components/host/host.component';
 import { FormComponent } from './components/form/form.component';
-import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { routing } from './app.routes';
+import { DateControlComponent } from './components/controls/date.component';
+import { NameControlComponent } from './components/controls/name.component';
 
 @NgModule({
     declarations: [ 
         AppComponent,
         HostComponent,
-        FormComponent       
+        FormComponent,
+        DateControlComponent,
+        NameControlComponent
     ],
     imports: [ 
         routing,
