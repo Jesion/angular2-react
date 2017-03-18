@@ -1,6 +1,6 @@
 # Angular 2 host component interacting with React child components (via Redux).
 
-[Demo](http://demo.robertjesionek.com/angular2-react)
+[Demo](http://ng2-react-demo.robertjesionek.com/host)
 
 # building and running it
 
