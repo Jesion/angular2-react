@@ -1,6 +1,6 @@
 <div class="host-container">
     <div class="panel">
-        <label>{{model.componentTitle}} Current state elements: {{store.store.getState().length}}</label>
+        <label>{{model.title}} Current state elements: {{store.store.getState().length}}</label>
         <div class="frm">
             <input type="text" [(ngModel)]="val"/>
             <button (click)="onAdd()">Add</button>
